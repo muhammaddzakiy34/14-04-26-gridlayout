@@ -1,0 +1,70 @@
+/*Mobile*/
+.container {
+    display: grid;
+    grid-template-areas: "header"
+                         "nav"
+                         "content"
+                         "ads"
+                         "footer";
+    grid-template-rows: auto auto 1fr auto auto;
+    min-height: 100vh;
+    
+}
+/*tab*/
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-areas: "header header"
+                             "nav content"
+                             "ads ads"
+                             "footer footer";
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-columns: 200px 1fr;
+    }
+    
+}
+/*desktop*/
+@media screen and (min-width: 1024px) {
+    .container {
+        grid-template-areas: "header header header"
+                             "nav content ads"
+                             "footer footer footer";
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 200px 1fr 200px;
+    }
+    
+}
+
+header {
+    grid-area: header;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+
+nav {
+    grid-area: nav;
+    background-color: rgb(192, 30, 30);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.content {
+    grid-area: content;
+    background-color: rgb(105, 6, 6);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.ads {
+    grid-area: ads;
+    background-color: rgb(56, 0, 0);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(73, 15, 0);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
